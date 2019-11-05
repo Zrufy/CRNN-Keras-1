@@ -4,8 +4,8 @@ from keras.callbacks import EarlyStopping, ModelCheckpoint
 from Image_Generator import TextImageGenerator
 from Model import get_Model
 from parameter import *
-K.set_learning_phase(0)
-
+#K.set_learning_phase(0)
+#K.set_learning_phase (), in the older version of keras, because of BN layers, we must specify the training and inference mode, but in the new version of keras this bug is fixed and don't necessary to set this option.
 # # Model description and training
 
 model = get_Model(training=True)
